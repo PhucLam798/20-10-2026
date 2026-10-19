@@ -83,7 +83,7 @@ Lâm đẹp zai`
 
   Đây là bài do Lâm đẹp zai này làm đấy gói ghém thành một món quà nho nhỏ gửi riêng cho bạn. Quà online nên không cần tìm chỗ cất, bạn cứ nhận hết hoa với lời chúc là được nha :))
 
-  Không biết sắp tới có còn được gặp Tiên ở ltrường nữa không, nhưng dù bạn có lựa chọn con đường nào đi nữa, mình vẫn mong mọi chuyện sẽ thật tốt đẹp với bạn. Trước mắt cứ ưu tiên sức khỏe, nghỉ ngơi thật tốt và đừng tạo quá nhiều áp lực cho bản thân nhé. Chuyện học hành hay những dự định khác rồi sẽ có cách, quan trọng nhất vẫn là bạn khỏe mạnh và vui vẻ.
+  Không biết sắp tới có còn được gặp Tiên ở trường nữa không, nhưng dù m có lựa chọn con đường nào đi, t vẫn mong mọi chuyện sẽ thật tốt đẹp với bạn. Trước mắt cứ ưu tiên sức khỏe, nghỉ ngơi thật tốt và đừng tạo quá nhiều áp lực cho bản thân hì. Chuyện học hành hay những dự định khác rồi sẽ có cách, quan trọng nhất vẫn là bạn khỏe mạnh và vui vẻ.
 
   Hy vọng một ngày không xa, tụi mình lại có dịp gặp nhau, ngồi nói chuyện và cười cợt :)). Dù sau này mỗi người có một hành trình riêng thì vẫn mong Tiên luôn gặp được những người tốt và có thật nhiều điều đáng nhớ.
 
