@@ -74,10 +74,10 @@ Bạn của Thư,
 Lâm đẹp zai`
   },
   {
-    mssv: "26200125",
-    name: "Phạm Thị Thủy Tiên",
+    mssv: "26200124",
+    name: "Cao Ngọc Thủy Tiên",
     sender: "Lâm đẹp zai",
-    letter: `Gửi bạn tôi — Phạm Thị Thủy Tiên,
+    letter: `Gửi bạn tôi — Cao Ngọc Thủy Tiên,
 
   20/10 tới rồi, chúc Tiên luôn xinh đẹp, vui vẻ và tự tin với những điều mình chọn nha! Đặc biệt, chúc Tiên mau khỏe lại, có thật nhiều sức khỏe và luôn giữ được tinh thần lạc quan. Mong rằng những ngày sắp tới sẽ nhẹ nhàng hơn với bạn, có thêm thật nhiều niềm vui và những chuyện nhỏ xíu khiến bạn bật cười :))
 
