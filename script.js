@@ -188,6 +188,33 @@
   let letterRead = false;
   const littleWishes = ['Chúc bạn luôn vui vẻ.', 'Chúc bạn luôn khỏe mạnh.', 'Chúc bạn học tập tốt.', 'Chúc bạn thi cử suôn sẻ.', 'Chúc bạn gặp nhiều may mắn.', 'Chúc bạn có thêm nhiều bạn tốt.', 'Chúc bạn làm được điều mình thích.', 'Chúc bạn có nhiều chuyến đi vui.', 'Chúc bạn nhận được nhiều hoa và quà.', 'Chúc bạn ngày 20/10 thật vui!'];
   const titles = ['Quà 20/10 của lớp', 'Chúc mừng 20/10', 'Hoa tặng bạn', 'Thêm một món quà', 'Lời chúc của lớp', 'Thiệp 20/10'];
+  const defaultPageTitle = document.title;
+  const senderCopy = [
+    ['.wordmark i', 'gửi bạn tôi.'],
+    ['.wordmark small', 'LÂM ĐẸP ZAI'],
+    ['.occasion', '20.10 — GỬI RIÊNG BẠN TÔI'],
+    ['.intro-subtitle', 'Món quà nhỏ do Lâm đẹp zai làm, gửi riêng bạn tôi :))'],
+    ['#intro-envelope .envelope-address', 'Gửi bạn tôi'],
+    ['#date-message', 'Lâm chúc bạn tôi một ngày 20/10 thật vui!'],
+    ['.letter-paper-bottom > span:first-child', 'Lâm đẹp zai.'],
+    ['.finale-recipient + p', 'Chúc bạn tôi luôn vui vẻ, khỏe mạnh, học tốt và gặp nhiều may mắn.'],
+    ['.frequency-quote', 'Chúc bạn tôi có một ngày 20/10 thật vui bên bạn bè và người thân.'],
+    ['.finale-signature', 'Lâm đẹp zai']
+  ].map(([selector, personalText]) => {
+    const element = $(selector);
+    return { element, personalText, defaultHTML: element.innerHTML };
+  });
+
+  function personalizeSender(student) {
+    const personal = Boolean(student?.sender);
+    senderCopy.forEach(({ element, personalText, defaultHTML }) => {
+      if (personal) element.textContent = personalText;
+      else element.innerHTML = defaultHTML;
+    });
+    document.title = personal ? `20/10 · Lâm gửi ${student.name}` : defaultPageTitle;
+    titles[0] = personal ? 'Quà 20/10 của Lâm' : 'Quà 20/10 của lớp';
+    titles[4] = personal ? 'Lời chúc của Lâm' : 'Lời chúc của lớp';
+  }
 
   function announce(message) { $('#announcement').textContent = message; }
   function updateNavigation() {
@@ -227,6 +254,7 @@
   }
   function personalize(student) {
     selectedStudent = student;
+    personalizeSender(student);
     letterRead = false; $('#finish-letter').disabled = true;
     $$('[data-student-name]').forEach(el => { el.textContent = student.name; });
     $('#greeting-name').textContent = student.name;
@@ -361,6 +389,7 @@
     if (transitioning) return;
     document.body.classList.add('experience-resetting');
     await goToSlide(0);
+    personalizeSender(null);
     completed.fill(false, 0, 5);
     letterRead = false; $('#finish-letter').disabled = true;
     $('#student-form').hidden = false; $('#student-form').classList.remove('departing');
@@ -476,10 +505,11 @@
     let imageURL = null, downloadURL = null;
     try {
       const name = escapeXML(selectedStudent.name);
+      const sender = escapeXML(selectedStudent.sender || 'Các bạn nam lớp ĐTVT');
       const cardSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" fill="none"><defs>${floralDefs}</defs>
         <rect width="1200" height="1600" fill="#fff1f8"/><rect x="35" y="35" width="1130" height="1530" rx="6" fill="none" stroke="#dfb5d7" stroke-width="2"/>
         <use href="#botanical-branch" x="-100" y="850" width="330" height="630" opacity=".45"/><use href="#botanical-branch" x="980" y="70" width="260" height="500" opacity=".35"/>
-        <text x="600" y="126" text-anchor="middle" fill="#889375" font-family="Georgia,serif" font-size="22" letter-spacing="5">CÁC BẠN NAM LỚP ĐTVT</text>
+        <text x="600" y="126" text-anchor="middle" fill="#889375" font-family="Georgia,serif" font-size="22" letter-spacing="5">${sender.toUpperCase()}</text>
         <g transform="translate(285 130) scale(1.5)">${bouquetMarkup()}</g>
         <rect x="125" y="760" width="950" height="680" rx="4" fill="#fff9fc" stroke="#dfbad4" stroke-width="2"/>
         <text x="600" y="835" text-anchor="middle" fill="#839073" font-family="Arial,sans-serif" font-size="18" letter-spacing="4">CHÚC MỪNG NGÀY PHỤ NỮ VIỆT NAM</text>
@@ -487,7 +517,7 @@
         <text x="600" y="1080" text-anchor="middle" fill="#8f6172" font-family="Georgia,serif" font-style="italic" font-size="${selectedStudent.name.length > 32 ? 29 : selectedStudent.name.length > 22 ? 34 : 40}" ${selectedStudent.name.length > 45 ? 'textLength="830" lengthAdjust="spacingAndGlyphs"' : ''}>Gửi ${name}</text>
         <g text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#7d7d6d"><text x="600" y="1152">Chúc bạn luôn vui vẻ, khỏe mạnh,</text><text x="600" y="1194">học tốt và gặp nhiều may mắn.</text></g>
         <g text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="28" fill="#8b9579"><text x="600" y="1270">Chúc bạn có một ngày 20/10 thật vui</text><text x="600" y="1309">bên bạn bè và người thân.</text></g>
-        <text x="600" y="1384" text-anchor="middle" fill="#b17a8d" font-family="Georgia,serif" font-style="italic" font-size="29">Các bạn nam lớp ĐTVT</text>
+        <text x="600" y="1384" text-anchor="middle" fill="#b17a8d" font-family="Georgia,serif" font-style="italic" font-size="29">${sender}</text>
         <text x="600" y="1510" text-anchor="middle" fill="#a59b88" font-family="Georgia,serif" font-style="italic" font-size="22">Chúc mừng ngày Phụ nữ Việt Nam!</text></svg>`;
       const imageBlob = new Blob([cardSVG], { type: 'image/svg+xml;charset=utf-8' }); imageURL = URL.createObjectURL(imageBlob);
       const image = new Image();
