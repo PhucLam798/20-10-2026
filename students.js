@@ -74,22 +74,33 @@ Bạn của Thư,
 Lâm đẹp zai`
   },
   {
-    mssv: "26200125",
-    name: "Phạm Thị Thủy Tiên",
+    mssv: "26200124",
+    name: "Cao Ngọc Thủy Tiên",
     sender: "Lâm đẹp zai",
-    letter: `Gửi bạn tôi — Phạm Thị Thủy Tiên,
+    letter: `Gửi bạn tôi — Cao Ngọc Thủy Tiên,
 
   20/10 tới rồi, chúc Tiên luôn xinh đẹp, vui vẻ và tự tin với những điều mình chọn nha! Đặc biệt, chúc Tiên mau khỏe lại, có thật nhiều sức khỏe và luôn giữ được tinh thần lạc quan. Mong rằng những ngày sắp tới sẽ nhẹ nhàng hơn với bạn, có thêm thật nhiều niềm vui và những chuyện nhỏ xíu khiến bạn bật cười :))
 
   Đây là bài do Lâm đẹp zai này làm đấy gói ghém thành một món quà nho nhỏ gửi riêng cho bạn. Quà online nên không cần tìm chỗ cất, bạn cứ nhận hết hoa với lời chúc là được nha :))
 
-  Không biết sắp tới có còn được gặp Tiên ở ltrường nữa không, nhưng dù bạn có lựa chọn con đường nào đi nữa, mình vẫn mong mọi chuyện sẽ thật tốt đẹp với bạn. Trước mắt cứ ưu tiên sức khỏe, nghỉ ngơi thật tốt và đừng tạo quá nhiều áp lực cho bản thân nhé. Chuyện học hành hay những dự định khác rồi sẽ có cách, quan trọng nhất vẫn là bạn khỏe mạnh và vui vẻ.
+  Không biết sắp tới có còn được gặp Tiên ở trường nữa không, nhưng dù m có lựa chọn con đường nào đi, t vẫn mong mọi chuyện sẽ thật tốt đẹp với bạn. Trước mắt cứ ưu tiên sức khỏe, nghỉ ngơi thật tốt và đừng tạo quá nhiều áp lực cho bản thân hì. Chuyện học hành hay những dự định khác rồi sẽ có cách, quan trọng nhất vẫn là bạn khỏe mạnh và vui vẻ.
 
   Hy vọng một ngày không xa, tụi mình lại có dịp gặp nhau, ngồi nói chuyện và cười cợt :)). Dù sau này mỗi người có một hành trình riêng thì vẫn mong Tiên luôn gặp được những người tốt và có thật nhiều điều đáng nhớ.
 
   Chúc bạn tôi một ngày 20/10 thật ý nghĩa, mau khỏe và luôn bình an nhé! Hẹn gặp lại vào một ngày không xa :))
 
   **Thân gửi Tiên,  
+  Lâm🌷**`
+  },
+    {
+    mssv: "26200039",
+    name: "Hoàng Gay",
+    sender: "Lâm đẹp zai",
+    letter: `Gửi bạn tôi ,
+
+  Chúc Hoàng Gay 20/10 vui vẻ, tự tin và đẹp gái và ít xem sếch lại:))
+  Và có tình yêu đẹp với lớp trưởng Bắc Cực <3333
+  **Thân gửi Chàng Gay,  
   Lâm🌷**`
   }
 ];
